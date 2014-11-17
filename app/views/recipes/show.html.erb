@@ -12,12 +12,13 @@
 <!--This is a comment. Comments are not displayed in the browser
     <%= image_tag("cake.jpg", :alt => "cake", :size => "200x150") %> -->
 
-<!--This is a comment. Comments are not displayed in the browser
-<% if @recipe.image? %> -->
+<!--This is a comment. Comments are not displayed in the browser -->
+<% if @recipe.image? %> 
+	
 	<%= image_tag @recipe.image.url %>	<br />
 	<%= link_to @recipe.image.url, @recipe.image.url %>
 
-<!-- <% end %> -->
+<% end %>
 
 </div>
 <% # Will the style MEDIUM configured before in your model %>
