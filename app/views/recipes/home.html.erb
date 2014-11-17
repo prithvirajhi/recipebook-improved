@@ -1,3 +1,39 @@
+<div id = "myCarousel" class = "carousel slide">
+  <ol class = "carousel-indicators">
+     <li data-target = "#myCarousel" data-slide-to = "0" class = "active"></li>
+     <li data-target = "#myCarousel" data-slide-to = "1"></li>
+     <li data-target = "#myCarousel" data-slide-to = "2"></li>
+  </ol>
+
+  <div class = "carousel-inner">
+     <div class = "item active">
+        <img src = "assets/Barbeque.jpg" alt = "Barbeque" class = "img-responsive">
+        <div class = "carousel-caption">
+           <h3>Barbeque</h3>
+        </div>
+     </div>
+     <div class = "item">
+        <img src = "assets/Crab.jpg" alt = "Crab" class = "img-responsive">
+        <div class = "carousel-caption">
+           <h3>Crab</h3>
+        </div>
+     </div>
+     <div class = "item">
+        <img src = "assets/Grill.jpg" alt = "Grill" class = "img-responsive">
+        <div class = "carousel-caption">
+           <h3>Grill</h3>
+        </div>
+     </div>
+  </div>
+  <a class = "carousel-control left" href = "#myCarousel" data-slide = "prev">
+     <span class = "icon-prev"></span>
+  </a>
+  <a class = "carousel-control right" href = "#myCarousel" data-slide = "next">
+     <span class = "icon-next"></span>
+  </a>
+</div> 
+<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src = "js/bootstrap.js"></script>
 <%= form_for :recipe, :url =>recipes_path, :html => { :class => "form-horizontal recipe" } do |f| %>
 
 
