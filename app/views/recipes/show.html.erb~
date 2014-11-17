@@ -9,20 +9,10 @@
   </head>
 
 <div class="control-group" style="padding-bottom: 5px">
-<!--This is a comment. Comments are not displayed in the browser
-    <%= image_tag("cake.jpg", :alt => "cake", :size => "200x150") %> -->
-
-<!--This is a comment. Comments are not displayed in the browser
-<% if @recipe.image? %> -->
-	<%= image_tag @recipe.image.url %>	<br />
-	<%= link_to @recipe.image.url, @recipe.image.url %>
-
-<!-- <% end %> -->
-
+    <%= image_tag("cake.jpg", :alt => "cake", :size => "200x150") %>
 </div>
-<% # Will the style MEDIUM configured before in your model %>
-<%= image_tag @recipe.image.url(:medium) %>
-<br/>
+
+
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
@@ -47,6 +37,8 @@
    </button>
 
   </div>
+
+
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               recipes_path, :class => 'btn btn-default' %>
