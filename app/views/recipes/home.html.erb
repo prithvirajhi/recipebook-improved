@@ -35,26 +35,4 @@
 <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src = "js/bootstrap.js"></script>
 <%= form_for :recipe, :url =>recipes_path, :html => { :class => "form-horizontal recipe" } do |f| %>
-
-
-  <div style="padding-top: 125px">
-     <button type="button" class="btn btn-primary custom">My recipes</button>
-  </div>
-
-  <div style="padding-top: 25px">
-     <button type="button" class="btn btn-primary custom">Search recipes</button>
-  </div>
-
-  <div style="padding-top: 25px">
-     <button type="submit" class="btn btn-primary custom" name="new_recipes">Enter new recipe</button>
-
-  </div>
-
-  <div style="padding-top: 25px">
-     <button type="button" class="btn btn-primary custom">Trial recipes</button>
-  </div>
-
-  <div style="padding-top: 25px">
-     <button type="button" class="btn btn-primary custom">Grocery list</button>
-  </div>
 <% end %>

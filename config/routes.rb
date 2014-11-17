@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'recipes/home'
+#  get 'recipes/home'
   resources :recipes
   root 'recipes#home'
   

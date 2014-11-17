@@ -33,6 +33,11 @@ class RecipesController < ApplicationController
        render :action => 'new'
        return
     end
+    if params[:home]
+       @recipe = Recipe.new
+       render :action => 'home'
+       return
+    end
 
     @recipe = Recipe.new(recipe_params)
 
