@@ -3,6 +3,17 @@
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+
+<div class="control-group" style="padding-bottom: 5px">
+    <%= image_tag("cake.jpg", :alt => "cake", :size => "200x150") %>
+</div>
+
+
+
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @recipe.name %></dd>
@@ -14,16 +25,23 @@
   <dd><%= @recipe.instructions %></dd>
 </dl>
 
-  <div class="control-group">
+  <div class="control-group" style="padding-bottom: 25px">
      </button>
-   <button type="button" class="btn btn-default">
+   <button type="button" class="btn btn-primary">
     Add to my recipes
    </button>
+
+  </button>
+   <button type="button" class="btn btn-primary", "padding-bottom: 60px">
+    Add to trial recipes
+   </button>
+
   </div>
 
 
+
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              recipes_path, :class => 'btn btn-default'  %>
+              recipes_path, :class => 'btn btn-default' %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_recipe_path(@recipe), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

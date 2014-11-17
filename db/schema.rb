@@ -11,15 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141115021500) do
+ActiveRecord::Schema.define(version: 20141116231735) do
 
   create_table "recipes", force: true do |t|
     t.string   "name"
     t.integer  "serving"
     t.text     "item"
     t.text     "instructions"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
   end
 
 end
