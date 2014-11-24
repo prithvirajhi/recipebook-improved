@@ -39,13 +39,23 @@
   <div class="control-group" style="padding-bottom: 25px">
      </button>
    <button type="button" class="btn btn-primary">
-    Add to my recipes
+    Add to My Recipes
    </button>
 
   </button>
    <button type="button" class="btn btn-primary", "padding-bottom: 60px">
-    Add to trial recipes
+    Add to Trial Recipes
    </button>
+<%= form_for :grocery_list, :url => grocery_lists_path  do |f| %>
+<%= f.hidden_field :listname, :value => @recipe.name %>
+<%= f.hidden_field :list, :value => @recipe.item %>
+
+<button type="submit" class="btn btn-primary" name="new_grocery_list",  "padding-bottom: 60px">
+    Add to Grocery List
+   </button>
+
+<% end %>
+
 
   </div>
 

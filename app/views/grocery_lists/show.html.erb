@@ -1,0 +1,22 @@
+<%- model_class = GroceryList -%>
+
+
+<p>
+  <strong>Grocery List:</strong>
+  <%= @grocery_list.listname %>
+</p>
+
+<p>
+ 
+<%= text_area_tag(:list, @grocery_list.list, size: "73x20", disabled: true ) %>
+</p>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              grocery_lists_path, :class => 'btn btn-default' %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_grocery_list_path(@grocery_list), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              grocery_list_path(@grocery_list),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

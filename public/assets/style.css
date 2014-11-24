@@ -1,0 +1,298 @@
+html{
+	height: 100%
+}
+
+body{
+	margin: 0;
+	background: #eee; /*grey*/
+      	background:-moz-radial-gradient(center,ellipse cover,rgba(255,255,255,1)0,rgba(204,204,204,1)100%);
+        background:-webkit-gradient(radial,center center,0,center center,100%,color-stop(0%,rgba(255,255,255,1)),color-stop(100%,rgba(204,204,204,1)));
+        background:-webkit-radial-gradient(center,ellipse cover,rgba(255,255,255,1)0,rgba(204,204,204,1)100%);
+        background:-o-radial-gradient(center,ellipse cover,rgba(255,255,255,1)0,rgba(204,204,204,1)100%);
+        background:-ms-radial-gradient(center,ellipse cover,rgba(255,255,255,1)0,rgba(204,204,204,1)100%);
+        background:radial-gradient(ellipse at center,rgba(255,255,255,1)0,rgba(204,204,204,1)100%);
+        background-attachment:fixed;
+}
+
+#header{
+	padding: 6px 0 7px;
+	border-bottom: 1px solid #fff;
+	box-shadow: 0 2px 5px rgba(0,0,0,.5);
+        background: #902050;
+	position: relative;
+	z-index: 10;
+	height: 85px;
+	overflow: hidden;
+}
+
+#header div{
+	width: 960px;
+	margin-left: 50px; 
+	margin-top: 5px;
+}
+
+#header a,
+#header img{
+	display: block;
+	border: none; 
+	margin-right: 15px;
+}
+
+#stage{
+	font: 14px/1.2 "Trebuchet MS",Trebuchet,"sans serif";
+	width: 280px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -200px 0 0 -140px;
+}
+
+#stage.message{
+	width: auto;
+	position: static;
+	margin: 40px 20px 0;
+	padding-bottom: 60px;
+}
+
+#stage.message ul{
+	padding-left: 1.75em;
+}
+
+#stage.message li{
+	margin: 10px 0;
+}
+.enhanced .fields,.fields input{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #fff;
+	border: 1px solid #999;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: block;
+	width: 100%;
+}
+.enhanced .fields input,.fields label{
+	display: block;
+	width: 100%;
+	border: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	background: 0 0;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+.fields label .text{
+	font: 14px/1.2 "Trebuchet MS",Trebuchet,sans-serif;
+	margin: 15px 0 5px;
+	display: block;
+}
+.enhanced .fields .text{
+	display: none;
+}
+.fields input{
+	font-size: 16px;
+	padding: 10px;
+}
+.enhanced .fields input{
+	padding-left: 40px;
+}
+.enhanced .fields label{
+	border-bottom: 1px solid #999;
+	position: relative;
+}
+.enhanced .fields label:last-child{
+	border: 0;
+}
+label i{
+	display: none;
+}
+.enhanced label input+i{
+	display: block;
+	font-size: 18px;
+	position: absolute;
+	top: 10px;
+	left: 12px;
+	width: 20px;
+	text-align: center;
+	color: #999;
+}
+.enhanced label input#password+i{
+	top: 11px;
+}
+.enhanced label input:focus+i{
+	color: #000;
+}
+#login-button{
+	font-weight: 700;
+	font-size: 14px;
+	margin-top: 15px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 10px;
+	display: block;
+	border: 1px solid #999;
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 100%;
+	cursor: pointer;
+	background: #f3f3f3;
+	background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#fff),color-stop(100%,#f3f3f3));
+	background-image:-webkit-linear-gradient(#fff,#f3f3f3);
+	background-image:-moz-linear-gradient(#fff,#f3f3f3);
+	background-image:-o-linear-gradient(#fff,#f3f3f3);
+	background-image:linear-gradient(#fff,#f3f3f3);-webkit-transition: all .3s;
+	-moz-transition: all .3s;transition:all .3s;
+}
+#login-button:hover{
+	border-color: #000;
+	-webkit-transition: all .1s;
+	-moz-transition: all .1s;
+	transition: all .1s;
+}
+h1{
+	font: 28px/1.1 Georgia,serif;color:#000;
+	padding: 18px 0 0;
+	margin :20px 0;
+	border-bottom: 1px dotted #ccc;padding-bottom:20px;
+}
+h2{
+	font-size:16px;
+	margin:20px 0 10px;
+}
+h1.with-button{
+	line-height: 19px;
+}
+a.btn-tag{
+	color: #369;
+	text-decoration: none;
+	font: 16px/1.2 "Trebuchet MS",Trebuchet,sans-serif;
+	display: block;
+	float: right;
+	padding: 6px 12px 5px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin-top: -3px;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+a.btn-tag i:before{
+	font-size: 18px;
+	vertical-align: -2px;
+	width: 24px;
+}
+a.btn-tag:hover{
+	background: #FFF;
+	-webkit-transition: all .1s;
+	-moz-transition: all .1s;
+	transition: all .1s;
+}
+.alert{
+	border: 1px solid #cc7f7f;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #f0d9d9;
+	color: #900;
+	font: 14px/1.2 "Trebuchet MS",Trebuchet,sans-serif;
+	padding: 8px 12px;
+	margin: 20px 0 15px;
+}
+.alert [class*=" icon-"],.alert [class^=icon-]{
+	font-size: 18px;
+	vertical-align: -2px;
+	margin-right: 6px;
+}
+input:focus{
+	outline: 0;
+}
+@media only screen and (max-width:360px){
+	#header{
+		height: auto;
+	}
+	#header div{
+		width: auto;
+	}
+	#header img{
+		width: 100%;
+		height: auto;
+	}
+}
+@media only screen and (max-height:580px){
+	#stage{
+		top: 60px;
+		margin-top: 0;
+	}
+}
+@media only screen and (min-width:700px){
+	#stage{
+		width: 500px;
+		margin-left: -250px;
+	}
+	#stage.message{
+		margin-left: auto;
+		margin-right: auto;
+		width: 500px;
+	}
+}
+@font-face{
+	font-family: shib-icons;
+	src: url(data:application/x-font-ttf; charset=utf-8; base64, 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)  format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+[class*=" icon-"],[class^=icon-]{
+	font-family: shib-icons;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-help:before{
+	content: "\e600";
+}
+.icon-user:before{
+	content: "\e601";
+}
+.icon-lock:before{
+	content: "\e602";
+}
+.icon-error:before{
+	content: "\e603";
+}
+.links{
+	margin: 20px 0;
+	padding-top: 20px;
+	border-top: 1px dotted #ccc;
+}
+.links ul{
+	margin: 0;
+	padding-top: 0;
+	padding-left: 1.2em;
+	font: 14px/1.2 "Trebuchet MS",Trebuchet,sans-serif;
+}
+.links ul li{
+	padding: 0;
+	margin: 0 0 10px;
+}
+.links ul li a{
+	color: #369;
+	border-bottom: 1px solid #c3d1e3;
+	text-decoration: none;
+}
+.links ul li a:hover{
+	border-bottom-color: #369;
+}
+

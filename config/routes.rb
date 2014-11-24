@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+
+  get 'pages/help'
+
+
+  resources :grocery_lists
+
 #  get 'recipes/home'
   resources :recipes
   root 'recipes#home'

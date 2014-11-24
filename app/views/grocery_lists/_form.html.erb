@@ -1,0 +1,44 @@
+<%= form_for(@grocery_list) do |f| %>
+
+
+  <% if @grocery_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grocery_list.errors.count, "error") %> prohibited this grocery_list from being saved:</h2>
+      <ul>
+      <% @grocery_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="control-group">
+    <%= f.label :listname, "Grocery List Name", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :listname, :class => 'form-control' %>
+
+    </div>
+    <%= error_span(@grocery_list[:listname]) %>
+  </div>
+
+<div class="control-group">
+    <%= f.label :list, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :list, :class => 'form-control' %>
+    </div>
+    <%= error_span(@grocery_list[:list]) %>
+  </div>
+
+<div style="padding-top: 25px">
+     <%= f.submit nil, :class => 'btn btn-primary' %>
+
+<button type="submit" class="btn btn-primary",  "padding-bottom: 60px">
+    Add to Existing Grocery List
+   </button>
+
+     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+               grocery_lists_path, :class => 'btn btn-default' %>
+  </div>
+
+
+<% end %>

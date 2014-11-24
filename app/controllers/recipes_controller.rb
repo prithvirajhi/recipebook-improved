@@ -6,8 +6,14 @@ class RecipesController < ApplicationController
   def home
   end
   def index
-    @recipes = Recipe.all
+	if params[:search]
+		@recipe = Recipe.search(params[:search])
+	else
+    		@recipe = Recipe.all
+	end
   end
+
+
 
   # GET /recipes/1
   # GET /recipes/1.json
@@ -24,7 +30,6 @@ class RecipesController < ApplicationController
   end
 
 
-
   # POST /recipes
   # POST /recipes.json
   def create
@@ -38,6 +43,8 @@ class RecipesController < ApplicationController
        render :action => 'home'
        return
     end
+
+
 
     @recipe = Recipe.new(recipe_params)
 
@@ -71,7 +78,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe.destroy
     respond_to do |format|
-      format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
+      format.html { redirect_to recipes_url, notice: 'Recipe was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -83,6 +90,6 @@ private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :serving, :item, :instructions, :new_recipes)
+      params.require(:recipe).permit(:name, :serving, :item, :instructions, :tag, :new_recipes)
     end
 end

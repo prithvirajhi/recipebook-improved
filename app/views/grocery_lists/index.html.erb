@@ -1,0 +1,36 @@
+<%- model_class = GroceryList -%>
+
+<h1>All Grocery Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grocery List Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grocery_list.each do |grocery_list| %>
+      <tr>
+        <td><%= link_to grocery_list.listname, grocery_list_path(grocery_list) %></td>
+	<td>
+	
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_grocery_list_path(grocery_list), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      grocery_list_path(grocery_list),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_grocery_list_path,
+            :class => 'btn btn-default btn-xs' %>
