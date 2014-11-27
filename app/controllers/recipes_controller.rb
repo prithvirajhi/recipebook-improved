@@ -90,6 +90,6 @@ private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :serving, :item, :instructions, :tag, :new_recipes)
+      params.require(:recipe).permit(:name, :serving, :item, :instructions, :tag, :new_recipes, :image)
     end
 end
