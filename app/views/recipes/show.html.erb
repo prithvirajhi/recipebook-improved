@@ -18,7 +18,7 @@
 	<%= image_tag @recipe.image.url %>	<br />
 	<%= link_to @recipe.image.url, @recipe.image.url %>
 
-<% end %>
+	<% end %>
 
 </div>
 <% # Will the style MEDIUM configured before in your model %>
@@ -48,7 +48,7 @@
    </button>
 <%= form_for :grocery_list, :url => grocery_lists_path  do |f| %>
 <%= f.hidden_field :listname, :value => @recipe.name %>
-<%= f.hidden_field :list, :value => @recipe.item %>
+<%= f.hidden_field :list, :value => @recipe.item.html_safe %>
 
 <button type="submit" class="btn btn-primary" name="new_grocery_list",  "padding-bottom: 60px">
     Add to Grocery List
