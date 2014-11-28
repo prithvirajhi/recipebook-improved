@@ -31,9 +31,9 @@
   <dt><strong><%= model_class.human_attribute_name(:serving) %>:</strong></dt>
   <dd><%= @recipe.serving %></dd>
   <dt><strong><%= model_class.human_attribute_name(:item) %>:</strong></dt>
-  <dd><%= @recipe.item %></dd>
+  <dd><%= @recipe.item.try(:html_safe) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:instructions) %>:</strong></dt>
-  <dd><%= @recipe.instructions %></dd>
+  <dd><%= @recipe.instructions.try(:html_safe) %></dd>
 </dl>
 
   <div class="control-group" style="padding-bottom: 25px">
@@ -48,7 +48,6 @@
    </button>
 <%= form_for :grocery_list, :url => grocery_lists_path  do |f| %>
 <%= f.hidden_field :listname, :value => @recipe.name %>
-<%= f.hidden_field :list, :value => @recipe.item.html_safe %>
 
 <button type="submit" class="btn btn-primary" name="new_grocery_list",  "padding-bottom: 60px">
     Add to Grocery List
