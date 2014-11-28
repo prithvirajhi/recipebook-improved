@@ -33,7 +33,7 @@
     <%= f.label :item, :class => 'control-label' %>
     <div class="controls">
       
-			<%= f.text_area :item, :class => "tinymce", :rows => 10, :cols => 80 %>
+			<%= f.text_area :item, :class => "tinymce", :rows => 30, :cols => 80 %>
     </div>
     <%= error_span(@recipe[:item]) %>
   </div>
@@ -41,7 +41,7 @@
     <%= f.label :instructions, :class => 'control-label' %>
     <div class="controls">
       
-			<%= f.text_area :item, :class => "tinymce", :rows => 10, :cols => 80 %>
+			<%= f.text_area :item, :class => "tinymce", :rows => 30, :cols => 80 %>
     </div>
     <%= error_span(@recipe[:instructions]) %>
   </div>
