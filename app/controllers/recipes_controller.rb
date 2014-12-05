@@ -5,12 +5,19 @@ class RecipesController < ApplicationController
   # GET /recipes.json
   def home
   end
-  def index
+
+  def index	
+	if params[:trial_recipes]
+		@recipe = Recipe.where(:trial => true)
+	end
+	if params[:my_recipes]
+		@recipe = Recipe.where(:trial => false)
+	end
 	if params[:search]
 		@recipe = Recipe.search(params[:search])
 	else
     		@recipe = Recipe.all
-	end
+	end		
   end
 
 
@@ -43,6 +50,8 @@ class RecipesController < ApplicationController
        render :action => 'home'
        return
     end
+	
+	
 
 
 
@@ -90,6 +99,6 @@ private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :serving, :item, :instructions, :tag, :new_recipes, :image)
+      params.require(:recipe).permit(:name, :serving, :item, :instructions, :tag, :trial, :new_recipes, :image)
     end
 end

@@ -58,6 +58,10 @@
 		<%= f.file_field :image %> 
 	</div>
 
+ <div><%= f.label :true, "Trial Recipe" %>
+<%= f.check_box :trial %> </div>
+
+
   <div style="padding-top: 25px">
      <%= f.submit nil, :class => 'btn btn-primary' %>
      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

@@ -34,18 +34,12 @@
   <dd><%= @recipe.item.try(:html_safe) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:instructions) %>:</strong></dt>
   <dd><%= @recipe.instructions.try(:html_safe) %></dd>
+
 </dl>
-
+<%= form_for @recipe, :html => { :class => "form-horizontal recipe" , :multipart => true } do |f| %>
   <div class="control-group" style="padding-bottom: 25px">
-     </button>
-   <button type="button" class="btn btn-primary">
-    Add to My Recipes
-   </button>
 
-  </button>
-   <button type="button" class="btn btn-primary", "padding-bottom: 60px">
-    Add to Trial Recipes
-   </button>
+
 <%= form_for :grocery_list, :url => grocery_lists_path  do |f| %>
 <%= f.hidden_field :listname, :value => @recipe.name %>
 
@@ -54,7 +48,7 @@
    </button>
 
 <% end %>
-
+<% end %>
 
   </div>
 
