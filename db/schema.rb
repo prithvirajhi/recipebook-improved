@@ -32,5 +32,6 @@ ActiveRecord::Schema.define(version: 20141204201120) do
     t.integer  "image_file_size"
     t.string   "tag"
     t.boolean  "trial"
+  end
 
 end
