@@ -9,11 +9,9 @@ class RecipesController < ApplicationController
   def index	
 	if params[:trial_recipes]
 		@recipe = Recipe.where(:trial => true)
-	end
-	if params[:my_recipes]
+	elsif params[:my_recipes]
 		@recipe = Recipe.where(:trial => false)
-	end
-	if params[:search]
+	elsif params[:search]
 		@recipe = Recipe.search(params[:search])
 	else
     		@recipe = Recipe.all
