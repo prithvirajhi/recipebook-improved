@@ -42,7 +42,7 @@
 </dl>
 <%= form_for @recipe, :html => { :class => "form-horizontal recipe" , :multipart => true } do |f| %>
   <div class="control-group" style="padding-bottom: 25px">
-
+ </div>
 <% end %>
 <%= form_for :grocery_list, :url => grocery_lists_path  do |f| %>
 <%= f.hidden_field :listname, :value => @recipe.name %>
@@ -55,7 +55,7 @@
 
 <% end %>
 
-  </div>
+ 
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               recipes_path, :class => 'btn btn-default' %>
