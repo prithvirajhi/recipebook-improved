@@ -33,7 +33,7 @@
     <%= f.label :item, :class => 'control-label' %>
     <div class="controls">
       
-			<%= f.text_area :item, :class => "tinymce", :rows => 10, :cols => 80 %>
+	<%= f.text_area :item, :class => 'form-control' %>
     </div>
     <%= error_span(@recipe[:item]) %>
   </div>
@@ -41,7 +41,7 @@
     <%= f.label :instructions, :class => 'control-label' %>
     <div class="controls">
       
-			<%= f.text_area :instructions, :class => "tinymce", :rows => 10, :cols => 80 %>
+	<%= f.text_area :instructions, :class => 'form-control' %>
     </div>
     <%= error_span(@recipe[:instructions]) %>
   </div>
@@ -52,6 +52,14 @@
       <%= f.text_field :tag, :class => 'form-control' %>
     </div>
 <%= error_span(@recipe[:tag]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :comment, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :comment, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipe[:comment]) %>
   </div>
 	<div class="field">
 		<%= f.label :image %> <br />

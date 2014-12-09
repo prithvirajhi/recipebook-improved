@@ -49,9 +49,6 @@ class RecipesController < ApplicationController
        return
     end
 	
-	
-
-
 
     @recipe = Recipe.new(recipe_params)
 
@@ -97,6 +94,6 @@ private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :serving, :item, :instructions, :tag, :trial, :new_recipes, :image)
+      params.require(:recipe).permit(:name, :serving, :item, :instructions, :tag, :trial, :comment, :new_recipes, :image)
     end
 end
